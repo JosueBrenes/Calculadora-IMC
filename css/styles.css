@@ -77,26 +77,3 @@
   font-weight: bold;
   color: #3d9970;
 }
-
-:root {
-  --logo-color-light: #000000;
-  --logo-color-dark: #ffffff;
-}
-
-@media (prefers-color-scheme: light) {
-  .navbar-brand img {
-    filter: invert(0);
-  }
-  .navbar-brand {
-    color: var(--logo-color-light);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .navbar-brand img {
-    filter: invert(1) !important;
-  }
-  .navbar-brand {
-    color: var(--logo-color-dark) !important;
-  }
-}
