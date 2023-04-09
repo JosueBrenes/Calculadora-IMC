@@ -77,3 +77,17 @@
   font-weight: bold;
   color: #3d9970;
 }
+
+:root {
+  --logo-color-light: #000000; /* Cambia aquí el color del logo para modo claro */
+  --logo-color-dark: #ffffff; /* Cambia aquí el color del logo para modo oscuro */
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-brand img {
+    filter: invert(1);
+  }
+  .navbar-brand {
+    color: var(--logo-color-dark);
+  }
+}
