@@ -79,15 +79,24 @@
 }
 
 :root {
-  --logo-color-light: #000000; /* Cambia aquí el color del logo para modo claro */
-  --logo-color-dark: #ffffff; /* Cambia aquí el color del logo para modo oscuro */
+  --logo-color-light: #000000;
+  --logo-color-dark: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+  .navbar-brand img {
+    filter: invert(0);
+  }
+  .navbar-brand {
+    color: var(--logo-color-light);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   .navbar-brand img {
-    filter: invert(1);
+    filter: invert(1) !important;
   }
   .navbar-brand {
-    color: var(--logo-color-dark);
+    color: var(--logo-color-dark) !important;
   }
 }
